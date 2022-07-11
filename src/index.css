@@ -1,13 +1,102 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url("https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400&display=swap");
+
+body{
+  background-color: #040404;
+  color: white;
+  font-family: "Cousine", monospace;
+  max-width: 1080px; 
+	margin: 0 auto !important; 
+	float: none !important; 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+@media only screen and (max-width: 260px) {
+  body{
+      font-size: 0.7rem;
+  }
+  h1{
+    font-size: 0.9rem;
+  }
+
+  i{
+    font-size: 0.5rem !important;
+  }
+
+}
+
+
+.heading-text{
+  color: #35e888 !important;
+  /* background-color: #2eff7b; */
+}
+
+.error-text{
+  color: #ff0033 !important;
+  /* background-color: #2eff7b; */
+}
+
+@media only screen and (min-width: 768px) {
+  .heading-text{
+    color: #35e888 !important;
+    font-size: 2.5rem;
+  }
+}
+
+
+button {
+	/* background-color: #2eff7b; */
+  background-color: #35e888;
+  color: #040404;
+	border: none;
+	outline: none;
+}
+
+button:focus {
+	border: none;
+	outline: none;
+}
+
+
+
+
+/****-------------custom styles -------------------*/
+.blog-thumbnail{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 1;
+  background: #35e888;
+}
+
+.route-link {
+	/* background-color: #2eff7b; */
+  background-color: #35e888;
+  color: #040404;
+	border: none;
+	outline: none;
+}
+.route-link:focus {
+	border: none;
+	outline: none;
+}
+
+.label-text{
+  color: #35e888;
+}
+
+.input {
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  box-shadow: none;
+  transition: color 0.5s;
+}
+
+.input:focus{
+  border-color: #35e888;
 }
